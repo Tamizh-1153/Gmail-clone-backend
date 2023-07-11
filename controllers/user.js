@@ -45,7 +45,7 @@ const forgotPassword = async (req, res) => {
     user.token = token
     await user.save()
     console.log(user)
-    const resetLink = `localhost:3000/api/v1/reset_password/${user._id}/${token}`
+    const resetLink = `https://gmail-clone-tm.netlify.app/api/v1/reset_password/${user._id}/${token}`
 
     console.log(process.env.PASSWORD)
     console.log(process.env.EMAIL)
