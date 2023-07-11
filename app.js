@@ -13,6 +13,9 @@ app.use(express.json())
 app.use(cors())
 app.use('/api/v1',userRouter)
 app.use('/mail',authenticateUser,emailRouter)
+app.get('/',(req,res)=>{
+    res.send('Gmail clone Backend')
+})
 
 
 const start=async()=>{
